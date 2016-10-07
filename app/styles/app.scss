@@ -15,12 +15,41 @@
 $proxima-condensed-regular: 'proximanovacond-regular-webfont';
 $proxima-condensed-semibold: 'proximanovacond-semibold-webfont';
 $proxima-regular: 'proximanova-regular-webfont';
+$average: 'average';
 
 
 body {
   height: 4000px;
 }
 
+a {
+  color: #68C9CC;
+  text-decoration: none;
+}
+
+p {
+  font-family: $average;
+  line-height: 1.5;
+  margin: 8px 0;
+  padding-bottom: 8px;
+  font-size: 16px;
+}
+
+h3 {
+  color: #17181A;
+  font-size: 32px;
+  font-family: $proxima-condensed-semibold;
+  line-height: 28px;
+}
+
+.faded-label {
+  color: #B8C2CC;
+  font-size: 16px;
+  font-family: $proxima-condensed-semibold;
+  line-height: 1;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 
 .header {
   position: fixed;
@@ -34,6 +63,8 @@ body {
   box-shadow: 0px 1px 1px #ccc;
   height: 88px;
   background-color: #fff;
+  z-index: 5;
+  max-width: 100%;
   &:before {
     content: '';
     background-color: #fff;
@@ -100,8 +131,71 @@ body {
 .container {
   width: 1300px;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .content {
   margin-top: 88px;
+  width: 710px;
+}
+
+.contact-item {
+  padding: 25px;
+}
+
+.contact-item-right {
+  margin-top: 45px;
+  p {
+    margin-top: 3px;
+  }
+}
+
+form.contact {
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
+  input, textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-family: $average;
+    box-sizing: border-box;
+    margin: 8px 0;
+  }
+  .contact-submit {
+    font-family: $proxima-condensed-semibold;
+    background-color: #68C9CC;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 0;
+  }
+}
+
+.contact-title {
+  margin-bottom: 0;
+}
+
+.blog-list, .blog-single {
+  padding-top: 55px;
+}
+
+.contact-container {
+  padding-top: 30px;
+}
+
+// utility
+
+.clear {
+  clear: both;
+}
+
+.halves {
+  width: 50%;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
 }

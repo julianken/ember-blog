@@ -1,3 +1,29 @@
 {{outlet}}
 
-<p>Contact</p>
+<div class="contact-container">
+  <div class="halves contact-item">
+    <h3 class="contact-title">Hello,</h3>
+    <p>
+      thanks for taking the time to check out my work! Please don't hesitate to
+      drop me a line here or reach out through one of the following channels.
+    </p>
+    <form class="contact" action="index.html" method="post">
+      {{input class="contact-email" type="email" placeholder="Email"}}
+      <br>
+      {{textarea class="contact-textarea" type="text" placeholder="Message"}}
+      {{input class="contact-submit" type="submit" value="Send"}}
+    </form>
+  </div>
+
+  <div class="halves contact-item contact-item-right">
+    <p class="faded-label">Email</p>
+    <p><a href="mailto:julian.kennon.d@gmail.com">julian.kennon.d@gmail.com</a></p>
+    <p class="faded-label">Phone</p>
+    <p><a href="tel:4088362785">(408) 836-2785</a></p>
+    <p class="faded-label">Github</p>
+    <p><a href="https://github.com/julianken/">https://github.com/julianken/</a></p>
+    <p class="faded-label">Codepen</p>
+    <p><a href="https://codepen.io/julesmckinnon/">https://codepen.io/julesmckinnon</a></p>
+  </div>
+  <div class="clear"></div>
+</div>

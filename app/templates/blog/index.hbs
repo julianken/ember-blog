@@ -1,0 +1,9 @@
+{{outlet}}
+
+
+<div class="blog-list">
+  {{#each model as |blog|}}
+    <h3>{{#link-to 'blog.show' blog.id}}{{blog.title}}{{/link-to}}</h3>
+    <p>{{{blog.body}}}</p>
+  {{/each}}
+</div>
