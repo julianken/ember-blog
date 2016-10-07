@@ -10,7 +10,9 @@ Router.map(function() {
   this.route('blog', { path: '/' }, function() {
     this.route('show', { path: '/:id' });
   });
-  this.route('work');
+  this.route('work', function() {
+    this.route('show', { path: '/:id' });
+  });
   this.route('contact');
 });
 

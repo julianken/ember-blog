@@ -172,15 +172,29 @@ form.contact {
     text-transform: uppercase;
     color: #fff;
     padding: 10px 0;
+    cursor: pointer;
   }
+}
+
+.works-header-image {
+  width: 100%;
 }
 
 .contact-title {
   margin-bottom: 0;
 }
 
+.blog-list-post {
+  margin-top: 73px;
+}
+
 .blog-list, .blog-single {
-  padding-top: 55px;
+  h3 {
+    a {
+      color: #17181A;
+    }
+  }
+  padding: 17px 25px;
 }
 
 .contact-container {
