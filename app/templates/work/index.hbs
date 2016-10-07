@@ -2,8 +2,11 @@
 
 <div class="blog-list">
   {{#each model as |work|}}
-    <img class="works-header-image" src="{{work.image_path}}">
-    <h3>{{#link-to 'work.show' work.id}}{{work.title}}{{/link-to}}</h3>
-    <p>{{{work.body}}}</p>
+
+    <div class="work-list-post">
+      <img class="works-header-image" src="{{work.image_path}}">
+      <h3>{{#link-to 'work.show' work.id}}{{work.title}}{{/link-to}}</h3>
+      <p>{{{work.body}}}</p>
+    </div>
   {{/each}}
 </div>

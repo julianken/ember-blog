@@ -17,9 +17,8 @@ $proxima-condensed-semibold: 'proximanovacond-semibold-webfont';
 $proxima-regular: 'proximanova-regular-webfont';
 $average: 'average';
 
-
 body {
-  height: 4000px;
+  overflow-y: scroll;
 }
 
 a {
@@ -184,9 +183,21 @@ form.contact {
   margin-bottom: 0;
 }
 
-.blog-list-post {
+.blog-list-post, .work-list-post {
   margin-top: 73px;
 }
+
+footer {
+  svg {
+    cursor: pointer;
+    &:hover {
+      #codepenIcon, #githubIcon, #linkedinIcon {
+          fill: #000;
+      }
+    }
+  }
+}
+
 
 .blog-list, .blog-single {
   h3 {
@@ -199,6 +210,14 @@ form.contact {
 
 .contact-container {
   padding-top: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 60px 0 86px 0;
+  svg {
+    padding: 12px 14px;
+  }
 }
 
 // utility
