@@ -1,0 +1,107 @@
+@mixin font-face($name) {
+  @font-face {
+    font-family: $name;
+    src:  url("/fonts/proxima-nova/#{$name}.eot?") format("eot"),
+	        url("/fonts/proxima-nova/#{$name}.woff2") format("tff"),
+	        url("/fonts/proxima-nova/#{$name}.woff") format("woff"),
+          url("/fonts/proxima-nova/#{$name}.woff2") format("svg");
+  }
+}
+
+@include font-face('proximanovacond-regular-webfont');
+@include font-face('proximanovacond-semibold-webfont');
+@include font-face('proximanova-regular-webfont');
+
+$proxima-condensed-regular: 'proximanovacond-regular-webfont';
+$proxima-condensed-semibold: 'proximanovacond-semibold-webfont';
+$proxima-regular: 'proximanova-regular-webfont';
+
+
+body {
+  height: 4000px;
+}
+
+
+.header {
+  position: fixed;
+  padding-top: 5px;
+  box-sizing: border-box;
+  width: 1300px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0px 1px 1px #ccc;
+  height: 88px;
+  background-color: #fff;
+  &:before {
+    content: '';
+    background-color: #fff;
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    left: -5px;
+    top: 0;
+    height: 88px;
+  }
+  &:after {
+    content: '';
+    background-color: #fff;
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    right: -5px;
+    top: 0;
+    height: 88px;
+  }
+  .header-title {
+    display: inline-block;
+    font-family: $proxima-regular;
+    padding: 18px 48px 20px 48px;
+    h3, p {
+      display: inline-block;
+      padding: 0 8px;
+      line-height: 16px;
+    }
+    h3 {
+      font-family: $proxima-condensed-semibold;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #17181A;
+    }
+    p {
+      font-size: 14px;
+      font-family: $proxima-condensed-regular;
+      color: #B8C2CC;
+    }
+  }
+  nav {
+    float: right;
+    ul {
+      padding: 16px 28px 20px 28px;
+      li {
+        padding: 0 20px;
+        font-size: 14px;
+        color: #17181A;
+        opacity: .4;
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: $proxima-condensed-semibold;
+        cursor: pointer;
+      }
+      li.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 88px;
+}

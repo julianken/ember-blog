@@ -1,0 +1,15 @@
+<div class="header">
+  <div class="header-title">
+    <h3>Julian Kennon</h3>|<p>Full Stack Developer</p>
+  </div>
+
+  <nav>
+    <ul>
+      {{#link-to 'blog' tagName="li"}}Blog{{/link-to}}
+      {{#link-to 'work' tagName="li"}}Work{{/link-to}}
+      {{#link-to 'contact' tagName="li"}}Contact{{/link-to}}
+    </ul>
+  </nav>
+</div>
+
+{{yield}}

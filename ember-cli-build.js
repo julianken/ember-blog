@@ -1,15 +1,22 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var mergeTrees = require('broccoli-merge-trees');
+var pickFiles = require('broccoli-static-compiler');
+
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
 
-  // Use `app.import` to add additional libraries to the generated
-  // output files.
-  //
+  var fonts = pickFiles('vendor/proxima-nova', {
+      srcDir: '/',
+      destDir: '/fonts'
+  });
+
+  module.exports = mergeTrees([app.toTree(), fonts]);
+
   // If you need to use different assets in different
   // environments, specify an object as the first parameter. That
   // object's keys should be the environment name and the values
