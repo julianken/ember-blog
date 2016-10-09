@@ -122,6 +122,7 @@ h3 {
       }
       li.active {
         opacity: 1;
+        color: #68C9CC;
       }
     }
   }
@@ -243,6 +244,39 @@ footer {
   }
 }
 
+.resume-section {
+  border-bottom: 1px solid #ccc;
+  padding: 50px 0;
+  .work-experience-entry {
+    padding-bottom: 24px;
+  }
+  .faded-label {
+    line-height: 1.5;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.resume-section.pdf-download {
+  text-align: center;
+  div {
+    font-family: $proxima-condensed-semibold;
+    background-color: #68C9CC;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 290px;
+    margin: 0 auto;
+  }
+}
+
+.neesons {
+  width: 25px;
+  vertical-align: -4px;
+}
+
 // utility
 
 .clear {
@@ -251,6 +285,20 @@ footer {
 
 .halves {
   width: 50%;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tripler {
+  width: 33.33333333332%;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.niner {
+  width: 66.6666665%;
   float: left;
   position: relative;
   box-sizing: border-box;

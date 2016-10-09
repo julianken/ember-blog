@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('show', { path: '/:id' });
   });
   this.route('contact');
+  this.route('resume');
 });
 
 export default Router;
