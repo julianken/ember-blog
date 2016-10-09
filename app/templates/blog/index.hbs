@@ -1,8 +1,8 @@
 {{outlet}}
 
-
-<div class="blog-list">
-  {{#each model as |blog|}}
+{{description-header text=model.header_text}}
+<div class="blog-list content">
+  {{#each model.blogs as |blog|}}
     <div class="blog-list-post">
       <p class="faded-label">{{moment-format blog.created_at 'MMMM Do, YYYY, h:mm A'}}</p>
       <h3>{{#link-to 'blog.show' blog.id}}{{blog.title}}{{/link-to}}</h3>

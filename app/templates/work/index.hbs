@@ -1,7 +1,9 @@
 {{outlet}}
 
-<div class="blog-list">
-  {{#each model as |work|}}
+{{description-header text=model.header_text}}
+
+<div class="blog-list content">
+  {{#each model.works as |work|}}
 
     <div class="work-list-post">
       <img class="works-header-image" src="{{work.image_path}}">
