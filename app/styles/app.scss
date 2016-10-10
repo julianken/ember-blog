@@ -125,6 +125,9 @@ h3 {
         color: #68C9CC;
       }
     }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -233,6 +236,9 @@ footer {
   box-sizing: border-box;
   display: table;
   padding: 0 288px;
+  @media screen and (max-width: 1350px) {
+    padding: 0 15vw;
+  }
   .emoji-header {
     display: table-cell;
     max-width: 710px;
@@ -272,9 +278,74 @@ footer {
   }
 }
 
+.tag-list {
+  text-transform: uppercase;
+}
+
 .neesons {
   width: 25px;
   vertical-align: -4px;
+}
+
+.desktop-header {
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+.mobile-header {
+  display: none;
+  margin-top: 6px;
+  @media screen and (max-width: 768px){
+    display: block;
+  }
+}
+
+
+
+.hamburger-container {
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+  .hamburger-component {
+    height: 3px;
+    background-color: #B8C2CC;
+    width: 22px;
+    margin: 4px 0;
+  }
+  .sesame-seed {
+    transition: transform 200ms;
+    transform-origin: 100% 80%;
+  }
+  .boring-bottom-bun {
+    transition: transform 200ms;
+    transform-origin: 100% 20%;
+  }
+  .that-meat {
+    transition: transform 150ms;
+    transform-origin: 0% 50%;
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+  float: right;
+  margin: 12px 24px;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.hamburger-container.active {
+  .sesame-seed {
+    transform: rotate(45deg) translate(5px, 6px) scaleX(.7);
+  }
+  .that-meat {
+    transform: scaleX(.9);
+  }
+  .boring-bottom-bun {
+    transform: rotate(-45deg) translate(5px, -6px) scaleX(.7);
+  }
 }
 
 // utility

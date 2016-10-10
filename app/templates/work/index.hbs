@@ -6,9 +6,16 @@
   {{#each model.works as |work|}}
 
     <div class="work-list-post">
-      <img class="works-header-image" src="{{work.image_path}}">
-      <h3>{{#link-to 'work.show' work.id}}{{work.title}}{{/link-to}}</h3>
-      <p>{{{work.body}}}</p>
+      {{#link-to 'work.show' work.id}}
+        <img class="works-header-image" src="{{work.image_path}}">
+        <h3>{{work.title}}</h3>
+      {{/link-to}}
+      <p>{{{work.description}}}</p>
     </div>
+    <p class="faded-label tag-list">
+      {{#each work.tag_list as |tag|}}
+        {{tag}}
+      {{/each}}
+    </p>
   {{/each}}
 </div>

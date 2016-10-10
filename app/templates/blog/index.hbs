@@ -6,7 +6,7 @@
     <div class="blog-list-post">
       <p class="faded-label">{{moment-format blog.created_at 'MMMM Do, YYYY, h:mm A'}}</p>
       <h3>{{#link-to 'blog.show' blog.id}}{{blog.title}}{{/link-to}}</h3>
-      <p>{{{blog.body}}}</p>
+      <p>{{blog.description}}</p>
     </div>
   {{/each}}
 </div>
