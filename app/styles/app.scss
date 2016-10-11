@@ -413,9 +413,6 @@ footer {
   }
 }
 
-
-
-
 body {
   z-index: 3;
   background-color: #fff;
@@ -437,8 +434,18 @@ body {
   }
 }
 
-
-
+.mobile-nav-title {
+  display: inline-block;
+  position: fixed;
+  top: 17px;
+  right: 80px;
+  font-size: 18px;
+  color: #68C9CC;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
 
 .active-mobile-body {
   @media screen and (max-width: 768px) {

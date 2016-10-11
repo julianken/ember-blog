@@ -7,8 +7,7 @@ export default Ember.Component.extend({
   uncomputedNavTitle: '',
   mobileNavTitle: Ember.computed('uncomputedNavTitle', function(){
     var title = this.get('uncomputedNavTitle');
-    title = title.split('.')[0];
-    title = title.charAt(0).toUpperCase() + title.slice(1);
+    title = title.split('.')[0].toUpperCase();
     return title;
   }),
   mobileNavTitleChanged: Ember.observer('router.currentRouteName', function(){
