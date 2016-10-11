@@ -21,6 +21,10 @@ html {
   height: 100%;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 body {
   margin: 0;
   overflow-y: scroll;
@@ -437,10 +441,10 @@ body {
 .mobile-nav-title {
   display: inline-block;
   position: fixed;
-  top: 17px;
+  top: 19px;
   right: 80px;
-  font-size: 18px;
-  color: #68C9CC;
+  font-size: 14px;
+  color: #D8D8D8;
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
