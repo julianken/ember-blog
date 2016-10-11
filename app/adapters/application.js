@@ -1,5 +1,5 @@
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
-  host: 'http://poligap-api.herokuapp.com'
+  host: 'https://poligap-api.herokuapp.com'
 });
