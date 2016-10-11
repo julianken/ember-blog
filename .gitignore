@@ -17,3 +17,4 @@ npm-debug.log
 testem.log
 
 #adapter configuration
+/app/adapters/application.js
