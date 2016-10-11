@@ -15,6 +15,8 @@
       {{#link-to 'contact' tagName="li"}}Contact{{/link-to}}
     </ul>
   </nav>
+  {{mobileNavTitle}}
+
   <div class="mobile-nav-toggle {{activeClass}}">
     <div class="hamburger-container">
       <div {{action "toggleMobileMenu"}} class="hamburger-container {{activeClass}}">
@@ -25,8 +27,8 @@
     </div>
   </div>
 </div>
-
 <div class="mobile-nav {{activeClass}}">
+
   <ul>
     <span {{action "closeMobileMenu"}}>{{#link-to 'blog' tagName="li"}}Blog{{/link-to}}</span>
     <span {{action "closeMobileMenu"}}>{{#link-to 'work' tagName="li"}}Work{{/link-to}}</span>
