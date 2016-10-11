@@ -7,9 +7,6 @@
       {{#link-to 'blog'}}<svg width="33" height="34" viewBox="40 27 33 34" xmlns="http:// www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M7.751 5.315c-.066.369-.148.862-.21 1.133A9.959 9.959 0 0 1 6.44 9.304a9.126 9.126 0 0 1-.843 1.23l.646-5.096c-.15-.083-.434-.124-.85-.124-.739 0-1.282.218-1.629.654l-.728 6.37C1.026 13.667.02 15.179.02 16.873c0 .847.211 1.444.633 1.792.421.346.904.52 1.447.52.855 0 1.505-.256 1.951-.768.444-.511.724-1.279.84-2.303l.495-3.911c.724-.56 1.349-1.204 1.801-1.95l-.407 3.532h2.305c.047-.435.148-1.297.304-2.586.156-1.287.269-2.231.338-2.832.093-.435.283-.809.571-1.12.29-.312.637-.468 1.041-.468.74 0 1.11.377 1.11 1.13 0 .435-.191.843-.573 1.227-.381.381-.901.655-1.56.82a8.53 8.53 0 0 0 .399 1.764c.508 1.448 1.399 2.171 2.67 2.171.542 0 1.12-.164 1.733-.494.346-.189.667-.5.962-.936.294-.435.523-.97.684-1.606-.22-.446-.451-.782-.693-1.006-.451 1.659-1.139 2.489-2.063 2.489h-.103c-.486-.024-.833-.471-1.041-1.341a11.835 11.835 0 0 1-.156-.759c1.433-.648 2.15-1.582 2.15-2.806 0-.694-.234-1.229-.702-1.607-.468-.375-1.06-.564-1.777-.564-.959 0-1.757.3-2.392.901.196-1.13.41-2.759.642-4.889v-.105c0-.542-.451-.813-1.353-.813-.416 0-.745.048-.988.142-.09.856-.268 2.462-.537 4.818zM1.129 16.697c0-1.059.584-2.059 1.752-3l-.365 2.823c-.104.777-.341 1.165-.71 1.165a.584.584 0 0 1-.486-.256c-.127-.171-.191-.415-.191-.732zM4.111 1.784c0 .389.133.719.399.989.265.271.589.406.97.406s.708-.135.98-.406c.271-.27.407-.6.407-.989 0-.387-.136-.72-.407-.997a1.327 1.327 0 0 0-.98-.414c-.381 0-.705.138-.97.414a1.39 1.39 0 0 0-.399.997z" id="a"/></defs><g fill="none" fill-rule="evenodd" transform="translate(40 28)"><circle fill="#68C9CC" cx="16" cy="16" r="16"/><use fill="#FFF" xlink:href="#a" transform="translate(8 7)"/></g></svg>{{/link-to}}
     </div>
   </div>
-
-
-
   <nav class="desktop-nav">
     <ul>
       {{#link-to 'blog' tagName="li"}}Blog{{/link-to}}
@@ -18,15 +15,24 @@
       {{#link-to 'contact' tagName="li"}}Contact{{/link-to}}
     </ul>
   </nav>
-    <div class="mobile-nav-toggle">
-      <div class="hamburger-container">
-        <div {{action "toggleMobileMenu"}} class="hamburger-container {{activeClass}}">
-          <div class="hamburger-component sesame-seed"></div>
-          <div class="hamburger-component that-meat"></div>
-          <div class="hamburger-component boring-bottom-bun"></div>
+  <div class="mobile-nav-toggle {{activeClass}}">
+    <div class="hamburger-container">
+      <div {{action "toggleMobileMenu"}} class="hamburger-container {{activeClass}}">
+        <div class="hamburger-component sesame-seed"></div>
+        <div class="hamburger-component that-meat"></div>
+        <div class="hamburger-component boring-bottom-bun"></div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="mobile-nav {{activeClass}}">
+  <ul>
+    {{#link-to 'blog' tagName="li"}}Blog{{/link-to}}
+    {{#link-to 'work' tagName="li"}}Work{{/link-to}}
+    {{#link-to 'resume' tagName="li"}}Resume{{/link-to}}
+    {{#link-to 'contact' tagName="li"}}Contact{{/link-to}}
+  </ul>
 </div>
 
 {{yield}}

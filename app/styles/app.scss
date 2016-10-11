@@ -17,6 +17,10 @@ $proxima-condensed-semibold: 'proximanovacond-semibold-webfont';
 $proxima-regular: 'proximanova-regular-webfont';
 $average: 'average';
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   overflow-y: scroll;
@@ -63,8 +67,9 @@ h3 {
   box-shadow: 0px 1px 1px #ccc;
   height: 88px;
   background-color: #fff;
-  z-index: 5;
+  z-index: 15;
   max-width: 100%;
+  transition: transform 350ms;
   &:before {
     content: '';
     background-color: #fff;
@@ -74,6 +79,9 @@ h3 {
     left: -5px;
     top: 0;
     height: 88px;
+    @media screen and (max-width: 1300px) {
+      display: none;
+    }
   }
   &:after {
     content: '';
@@ -84,6 +92,9 @@ h3 {
     right: -5px;
     top: 0;
     height: 88px;
+    @media screen and (max-width: 1300px) {
+      display: none;
+    }
   }
   .header-title {
     display: inline-block;
@@ -104,6 +115,9 @@ h3 {
       font-size: 14px;
       font-family: $proxima-condensed-regular;
       color: #B8C2CC;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 4px 24px 8px 24px;
     }
   }
   nav {
@@ -128,6 +142,48 @@ h3 {
     @media screen and (max-width: 768px) {
       display: none;
     }
+  }
+  @media screen and (max-width: 768px) {
+    height: 64px;
+    box-shadow: 2px 1px 4px 1px #ccc;
+  }
+}
+
+.mobile-nav {
+  float: right;
+  background-color: #FAFAFA;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: #FAFAFA;
+  width: 45vw;
+  z-index: 1;
+  transition: transform 350ms;
+  transition-timing-function: ease-in-out;
+  display: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 24px 44px;
+      font-size: 14px;
+      color: #ccc;
+      text-transform: uppercase;
+      font-family: $proxima-condensed-semibold;
+      cursor: pointer;
+      border-bottom: 1px solid #E6E6E6;
+    }
+    li.active {
+      opacity: 1;
+      color: #68C9CC;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  @media screen and (max-width: 500px) {
   }
 }
 
@@ -330,10 +386,55 @@ footer {
 .mobile-nav-toggle {
   display: none;
   float: right;
-  margin: 12px 24px;
+  margin: -1px 24px 12px 24px;
+  transition: transform 350ms margin 350ms;
+  transition-timing-function: ease-in-out;
   @media screen and (max-width: 768px) {
     display: block;
   }
+}
+
+
+
+
+body {
+  z-index: 3;
+  background-color: #fff;
+  position: relative;
+  .app-content {
+    position: relative;
+    background-color: #fff;
+    z-index: 7;
+    transition: transform 350ms;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+  @media screen and (max-width: 768px) {
+    top: -22px;
+    .app-content {
+      box-shadow: 2px 1px 4px 1px #ccc;
+    }
+  }
+}
+
+
+
+
+.active-mobile-body {
+  @media screen and (max-width: 768px) {
+    transform: translate3d(-45vw, 0, 0);
+  }
+}
+
+.active-mobile-header {
+  @media screen and (max-width: 768px) {
+    transform: translate3d(-45vw, 0, 0);
+  }
+}
+
+.mobile-nav.active {
+  transform: translate3d(0, 0, 0);
 }
 
 .hamburger-container.active {
@@ -359,6 +460,9 @@ footer {
   float: left;
   position: relative;
   box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .tripler {
@@ -366,6 +470,9 @@ footer {
   float: left;
   position: relative;
   box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .niner {

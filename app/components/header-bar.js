@@ -6,13 +6,15 @@ export default Ember.Component.extend({
   isActive: false,
   actions: {
     toggleMobileMenu() {
-      if (this.isActive == false) {
+      if (this.isActive === false) {
         this.set('activeClass', 'active');
         this.set('isActive', true);
       } else {
         this.set('activeClass', '');
         this.set('isActive', false);
       }
+      Ember.$('.app-content').toggleClass('active-mobile-body');
+      Ember.$('.header').toggleClass('active-mobile-header');
     }
   }
 });
