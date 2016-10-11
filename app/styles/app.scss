@@ -318,6 +318,20 @@ footer {
   p {
     margin: 0;
   }
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    .mobile-title-section {
+      background-color: #f0f2f5;
+      padding: 22px 44px;
+      border-bottom: 1px solid #ccc;
+    }
+    .inside-resume-section-wrapper {
+      padding: 100px 44px 24px 44px;
+      &:first-child {
+        padding-top: 100px;
+      }
+    }
+  }
 }
 
 .resume-section.pdf-download {
@@ -331,6 +345,9 @@ footer {
     cursor: pointer;
     width: 290px;
     margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      margin: 12px auto;
+    }
   }
 }
 
@@ -357,7 +374,9 @@ footer {
   }
 }
 
-
+.inside-resume-section-wrapper {
+  padding: 0 64px;
+}
 
 .hamburger-container {
   display: inline-block;
