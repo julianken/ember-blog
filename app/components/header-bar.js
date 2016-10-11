@@ -30,6 +30,13 @@ export default Ember.Component.extend({
         Ember.$('.header').removeClass('active-mobile-header');
         this.set('isActive', false);
       }
+    },
+    closeMobileMenu() {
+      this.set('activeClass', '');
+      Ember.$('.app-content').removeClass('active-mobile-body');
+      Ember.$('.header').removeClass('active-mobile-header');
+      Ember.$(window).scrollTop(0);
+      this.set('isActive', false);
     }
   }
 });
