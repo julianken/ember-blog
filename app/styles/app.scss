@@ -360,7 +360,7 @@ footer {
 }
 
 .neesons {
-  width: 25px;
+  width: 24px;
   vertical-align: -4px;
 }
 
@@ -510,4 +510,20 @@ body {
   float: left;
   position: relative;
   box-sizing: border-box;
+}
+
+// blog
+
+.blog-single.content {
+  margin-top: 80px;
+  img {
+    max-width: 100%;
+    padding: 40px 0;
+  }
+  .triplet {
+    width: 33%;
+    float: left;
+    padding: 40px 4px;
+    box-sizing: border-box;
+  }
 }
