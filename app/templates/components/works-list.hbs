@@ -1,0 +1,23 @@
+{{yield}}
+
+{{description-header text=model.header_text}}
+
+<div class="blog-list content">
+  {{#each model.works as |work|}}
+
+    <div class="work-list-post">
+      {{#link-to 'work.show' work.id}}
+        <img class="works-header-image" src="{{work.image_path}}">
+      {{/link-to}}
+        <h3>{{work.title}}</h3>
+      <p>{{{work.description}}}</p>
+      {{#link-to 'work.show' work.id}}<p class="read-more">Read More ></p>{{/link-to}}
+    </div>
+    <p class="faded-label tag-list">
+      {{#each work.tag_list as |tag|}}
+        {{tag}}
+      {{/each}}
+    </p>
+  {{/each}}
+
+</div>
