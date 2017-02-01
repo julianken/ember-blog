@@ -9,11 +9,11 @@
       thanks for taking the time to check out my work! Please don't hesitate to
       drop me a line here or reach out through one of the following channels.
     </p>
-    <form class="contact" action="index.html" method="post">
+    <form class="contact" action="http://localhost:3000/mail" method="post">
       {{input class="contact-email" type="email" placeholder="Email"}}
       <br>
       {{textarea class="contact-textarea" type="text" placeholder="Message"}}
-      {{input class="contact-submit" type="submit" value="Send"}}
+      <div class="contact-submit" {{action 'sendMessage'}}>Send</div>
     </form>
   </div>
 
@@ -27,5 +27,7 @@
     <p class="faded-label">Codepen</p>
     <p><a href="https://codepen.io/julesmckinnon/">https://codepen.io/julesmckinnon</a></p>
   </div>
+  <div class="clear"></div>
+
 </div>
 <div class="clear"></div>

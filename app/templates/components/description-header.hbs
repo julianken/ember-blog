@@ -1,7 +1,13 @@
-<div class="description-header">
-  <div>
-    <p class="emoji-header">{{{text}}}</p>
+
+  <div class="description-header">
+    {{#if text}}
+
+    <div>
+      <p class="emoji-header">{{{text}}}</p>
+    </div>
+    {{else}}
+    <div style="margin-top: 160px"></div>
+    {{/if}}
   </div>
-</div>
 
 {{yield}}
