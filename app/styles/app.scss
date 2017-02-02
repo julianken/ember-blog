@@ -61,6 +61,12 @@ h3 {
   margin-top: 0;
 }
 
+p.faded-label.mobile-title-section {
+  @media screen and (max-width: 910px) {
+    padding-left: 40px;
+  }
+}
+
 .header {
   position: fixed;
   padding-top: 5px;
@@ -609,6 +615,10 @@ body {
     float: left;
     padding: 40px 4px;
     box-sizing: border-box;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 40px;
+    margin-top: -73px;
   }
 }
 
