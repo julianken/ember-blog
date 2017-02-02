@@ -10,9 +10,12 @@
       drop me a line here or reach out through one of the following channels.
     </p>
     <form class="contact" action="http://localhost:3000/mail" method="post">
-      {{input class="contact-email" type="email" placeholder="Email"}}
-      <br>
-      {{textarea class="contact-textarea" type="text" placeholder="Message"}}
+      <div class="email-wrapper">
+        {{input class="contact-email" type="email" placeholder="Email"}}
+      </div>
+      <div class="message-wrapper">
+        {{textarea class="contact-textarea" type="text" placeholder="Message"}}
+      </div>
       <div class="contact-submit" {{action 'sendMessage'}}>Send</div>
     </form>
   </div>

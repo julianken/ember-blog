@@ -359,7 +359,6 @@ footer {
   transition: background-color 1s, color 1s, text-shadow 1s;
   .success-header {
     color: #eee;
-    text-shadow: 1px 1px 2px #888
   }
   > div {
     max-width: 768px;
@@ -613,12 +612,34 @@ body {
   }
 }
 
+.email-wrapper, .message-wrapper {
+  &:after {
+    color: #000;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid red;
+    padding: 8px;
+    z-index: 4;
+    display: block;
+    border-radius: 3px;
+    font-family: $proxima-regular;
+  }
+}
+.email-wrapper.error::after {
+    content: 'Please enter a valid e-mail';
+}
+
+.message-wrapper.error::after {
+  content: 'Message must be at least 20 characters';
+  margin-bottom: 8px;
+}
+
 @keyframes handWave {
   from {transform: rotate(20deg)}
   to   {transform: rotate(-20deg)}
 }
 
 .hand-wave {
-  transform-origin: 50% 50%;
+  transform-origin: 20px 20px;
   animation: handWave 750ms infinite alternate ease-in-out;
 }

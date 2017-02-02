@@ -4,7 +4,10 @@ export default Ember.Controller.extend({
   actions: {
     sendMessage: () => {
 
-      let data = {email: $('.contact-email').val(), message: $('.contact-textarea').val()}
+      let data = {
+        email: $('.contact-email').val(),
+        message: $('.contact-textarea').val()
+      }
 
       $.ajax({
         type: 'POST',
@@ -12,9 +15,27 @@ export default Ember.Controller.extend({
         data: data,
         dataType: "text",
         success: function(resultData) {
-          $('.description-header').css('background-color', '#72DCA3');
-          $('.contact-submit').addClass('success-button').html('.');
-          $('.emoji-header').children('div').html('Thanks! I\'ll be getting in contact with you soon!').addClass('success-header');
+          if ((data.email.includes('@') && data.email.includes('.')) && (data.message.length >= 20)) {
+            $('.email-wrapper').removeClass('error');
+            $('.message-wrapper').removeClass('error');
+            $('.description-header').css('background-color', '#72C59A');
+            $('.contact-submit').addClass('success-button').html('.');
+            $('.emoji-header').children('div').html('Thanks! I\'ll be getting in contact with you soon!').addClass('success-header');
+          }
+          else {
+            if ((!data.email.includes('@')) || (!data.email.includes('.'))) {
+              console.log('fix the email');
+              $('.email-wrapper').addClass('error');
+            } else {
+              $('.email-wrapper').removeClass('error');
+            }
+            if (data.message.length < 20) {
+              console.log('fix the message');
+              $('.message-wrapper').addClass('error');
+            } else {
+              $('.message-wrapper').removeClass('error');
+            }
+          }
         },
         error: function(error) {
           $('.contact-submit').css('background-color', '#D34E62').html('There was a problem, I\'d still love to hear from you though! Try e-mail');
