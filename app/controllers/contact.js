@@ -21,16 +21,18 @@ export default Ember.Controller.extend({
             $('.description-header').css('background-color', '#72C59A');
             $('.contact-submit').addClass('success-button').html('.');
             $('.emoji-header').children('div').html('Thanks! I\'ll be getting in contact with you soon!').addClass('success-header');
+            setTimeout(() => {
+              $('.emoji-header').children('div').html('<i class="em em-heart"></i>').removeClass('success-header');
+              $('.description-header').css('background-color', '#F5F7FA');
+            }, 3500);
           }
           else {
             if ((!data.email.includes('@')) || (!data.email.includes('.'))) {
-              console.log('fix the email');
               $('.email-wrapper').addClass('error');
             } else {
               $('.email-wrapper').removeClass('error');
             }
             if (data.message.length < 20) {
-              console.log('fix the message');
               $('.message-wrapper').addClass('error');
             } else {
               $('.message-wrapper').removeClass('error');

@@ -7,7 +7,9 @@ var pickFiles = require('broccoli-static-compiler');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    fingerprint: {
+      enabled: false
+    }
   });
 
   var fonts = pickFiles('vendor/proxima-nova', {
