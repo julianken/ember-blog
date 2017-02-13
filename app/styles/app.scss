@@ -63,7 +63,7 @@ h3 {
 
 p.faded-label.mobile-title-section {
   @media screen and (max-width: 910px) {
-    padding-left: 40px;
+    padding-left: 16px;
   }
 }
 
@@ -398,7 +398,7 @@ footer {
 }
 
 .resume-section {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #DAE0E6;
   padding: 50px 0;
   .work-experience-entry {
     padding-bottom: 24px;
@@ -414,14 +414,21 @@ footer {
   @media screen and (max-width: 768px) {
     padding: 0;
     .mobile-title-section {
-      background-color: #f0f2f5;
-      padding: 22px 44px;
-      border-bottom: 1px solid #ccc;
+      background-color: #F5F7FA;
+      padding: 32px 44px 16px;
+      border-bottom: 1px solid #DAE0E6;
+      font-size: 16px;
+      line-height: 11px;
     }
     .inside-resume-section-wrapper {
-      padding: 100px 44px 24px 44px;
+      padding: 84px 16px 0 16px;
       &:first-child {
         padding-top: 100px;
+      }
+    }
+    .work-experience-entry {
+      p {
+        padding-bottom: 0;
       }
     }
   }
@@ -436,11 +443,17 @@ footer {
     color: #fff;
     padding: 10px 0;
     cursor: pointer;
-    width: 290px;
     margin: 0 auto;
-    @media screen and (max-width: 768px) {
-      margin: 12px auto;
+    padding: 20px;
+    max-width: 320px;
+  }
+  @media screen and (max-width: 768px) {
+    div {
+      margin: 0 auto;
     }
+    padding: 32px 16px;
+    border-bottom: 1px solid #DAE0E6;
+    background-color: #F5F7FA;
   }
 }
 
