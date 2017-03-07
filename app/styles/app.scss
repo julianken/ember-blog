@@ -634,6 +634,18 @@ body {
     padding-top: 40px;
     margin-top: -73px;
   }
+  .blog-content h3 {
+    font-size: 24px;
+  }
+}
+
+pre {
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 12px;
+  }
 }
 
 .email-wrapper, .message-wrapper {

@@ -6,6 +6,5 @@ export default Ember.Component.extend({
   didInsertElement(){
     this._super();
     Prism.highlightAll();
-    console.log('inserted');
   }
 });
