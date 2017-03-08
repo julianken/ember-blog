@@ -297,10 +297,23 @@ form.contact {
 
 .works-header-image {
   width: 100%;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
+  border-radius: 2.8px;
+}
+
+.window-image {
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
+  border-radius: 2.8px;
+  max-width: 100%;
 }
 
 .contact-title {
   margin-bottom: 0;
+}
+
+.work-image-container {
+  padding: 40px 0;
+  text-align: center;
 }
 
 .blog-list-post, .work-list-post {
@@ -583,10 +596,19 @@ body {
   }
 }
 
+
 // utility
 
 .clear {
   clear: both;
+}
+
+.halves-container {
+  text-align: center;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    max-width: 400px;
+  }
 }
 
 .halves {
@@ -596,6 +618,22 @@ body {
   box-sizing: border-box;
   @media screen and (max-width: 768px) {
     width: 100%;
+  }
+  &.half-left {
+    padding: 0 20px 0 0;
+    @media screen and (max-width: 768px) {
+      padding: 0 0 40px 0;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  &.half-right {
+    padding: 0 0 0 20px;
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      max-width: 400px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -617,12 +655,10 @@ body {
 }
 
 // blog
-
 .blog-single.content {
   margin-top: 80px;
   img {
     max-width: 100%;
-    padding: 40px 0;
   }
   .triplet {
     width: 33%;
