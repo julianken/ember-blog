@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       works: this.store.findAll('work'),
-      header_text: 'Here are some projects and prototypes I\'ve been working on. Most of the agency projects I\'ve done have yet to ship, but I\'m happy to walk you through my code for them. <i class="em em-running"></i>'
+      header_text: 'Here are some projects and prototypes I\'ve been working on! Some are personal projects I\'ve worked on with friends, and others are client works while at agencies.<i class="em em-running"></i>'
     });
   }
 });

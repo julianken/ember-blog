@@ -9,9 +9,8 @@
       {{#link-to 'work.show' work.id}}
         <img class="works-header-image" src="{{work.image_path}}">
       {{/link-to}}
-        <h3>{{work.title}}</h3>
+        {{#link-to 'work.show' work.id}}<h3>{{work.title}}</h3>{{/link-to}}
       <p>{{{work.description}}}</p>
-      {{#link-to 'work.show' work.id}}<p class="read-more">Read More ></p>{{/link-to}}
     </div>
     <p class="faded-label tag-list">
       {{#each work.tag_list as |tag|}}

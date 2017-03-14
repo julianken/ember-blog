@@ -48,6 +48,10 @@ h3 {
   font-size: 32px;
   font-family: $proxima-condensed-semibold;
   line-height: 28px;
+  @media screen and (max-width: 575px) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .faded-label {
@@ -81,9 +85,12 @@ p.faded-label.mobile-title-section {
   z-index: 15;
   max-width: 100%;
   transition: transform 350ms;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06);
   > div {
-    max-width: 850px;
-    margin: 0 auto;
+    margin: 0 40px;
+    @media screen and (max-width: 768px) {
+      margin: 0;
+    }
   }
   &:before {
     content: '';
@@ -114,15 +121,14 @@ p.faded-label.mobile-title-section {
   .header-title {
     display: inline-block;
     font-family: $proxima-regular;
-    padding: 18px 48px 20px 8px;
+    padding: 18px 0px 20px 0px;
     h3, p {
       display: inline-block;
-      padding: 0 8px;
       line-height: 16px;
     }
     h3 {
       font-family: $proxima-condensed-semibold;
-      font-size: 16px;
+      font-size: 14px;
       text-transform: uppercase;
       color: #17181A;
       @media screen and (max-width: 910px) {
@@ -148,12 +154,19 @@ p.faded-label.mobile-title-section {
       li {
         padding: 0 20px;
         font-size: 14px;
-        color: #B8C2CC;
+        color: #B7C2CC;
         opacity: 1;
         display: inline-block;
         text-transform: uppercase;
         font-family: $proxima-condensed-semibold;
         cursor: pointer;
+        &:last-child {
+          padding-right: 0;
+        }
+        &:hover {
+          color: #A1A9B3;
+          transition: color 100ms ease-in-out;
+        }
       }
       li.active {
         opacity: 1;
@@ -190,7 +203,7 @@ p.faded-label.mobile-title-section {
     li {
       padding: 24px 44px;
       font-size: 14px;
-      color: #ccc;
+      color: #B7C2CC;
       text-transform: uppercase;
       font-family: $proxima-condensed-semibold;
       cursor: pointer;
@@ -317,7 +330,7 @@ form.contact {
 }
 
 .blog-list-post, .work-list-post {
-  margin-top: 56px;
+  margin-top: 48px;
   h3 {
     margin: 32px 0 16px 0;
     line-height: 48px;
@@ -329,7 +342,7 @@ form.contact {
 }
 
 .read-more {
-  margin-top: 4px;
+  margin-top: 13px;
 }
 
 footer {
@@ -371,7 +384,6 @@ footer {
 // description-header Component
 
 .description-header {
-  text-align: center;
   width: 100%;
   background-color: #F5F7FA;
   margin-top: 88px;
@@ -381,7 +393,7 @@ footer {
     color: #eee;
   }
   > div {
-    max-width: 768px;
+    max-width: 818px;
     margin: 0 auto;
   }
   @media screen and (max-width: 1350px) {
@@ -396,8 +408,6 @@ footer {
   .emoji-header {
     width: 100%;
     padding: 40px 0;
-    max-width: 710px;
-    margin: 0 auto;
     font-size: 18px;
     line-height: 27px;
     font-family: $proxima-regular;
@@ -405,7 +415,6 @@ footer {
     color: #899199;
     @media screen and (max-width: 768px) {
       padding: 24px 0;
-      text-align: left;
     }
   }
 }
@@ -659,6 +668,8 @@ body {
   margin-top: 80px;
   img {
     max-width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .triplet {
     width: 33%;
@@ -672,10 +683,24 @@ body {
   }
   .blog-content h3 {
     font-size: 24px;
+    @media screen and (max-width: 575px) {
+      font-size: 20px;
+    }
   }
 }
 
+.free-range-code {
+  display: block;
+  padding-top: 10px;
+}
+
+hr {
+  margin: 40px 0;
+}
+
 pre {
+  margin-bottom: 40px !important;
+  margin-top: 40px !important;
   @media screen and (max-width: 768px) {
     font-size: 14px;
   }
