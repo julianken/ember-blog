@@ -33,7 +33,7 @@ export default Ember.Component.extend({
         Ember.$('.app-content').removeClass('active-mobile-body');
         Ember.$('.header').removeClass('active-mobile-header');
         this.set('isActive', false);
-        setTimeout(() => { Ember.$('.mobile-nav').css('display', 'none') }, 350)
+        setTimeout(() => { Ember.$('.mobile-nav').css('display', 'none'); }, 350);
       } else {
         Ember.$('.mobile-nav').css('display', 'block');
         this.set('activeClass', 'active');

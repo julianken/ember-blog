@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import $ from 'jquery';
 
 export default Ember.Controller.extend({
   actions: {
@@ -7,14 +8,14 @@ export default Ember.Controller.extend({
       let data = {
         email: $('.contact-email').val(),
         message: $('.contact-textarea').val()
-      }
+      };
 
       $.ajax({
         type: 'POST',
         url: 'http://138.197.204.86:3000/messages',
         data: data,
         dataType: "text",
-        success: function(resultData) {
+        success: function() {
           if ((data.email.includes('@') && data.email.includes('.')) && (data.message.length >= 20)) {
             $('.email-wrapper').removeClass('error');
             $('.message-wrapper').removeClass('error');
@@ -39,10 +40,10 @@ export default Ember.Controller.extend({
             }
           }
         },
-        error: function(error) {
+        error: function() {
           $('.contact-submit').css('background-color', '#D34E62').html('There was a problem, I\'d still love to hear from you though! Try e-mail');
         }
-      })
+      });
     }
   }
 });

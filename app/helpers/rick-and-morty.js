@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function rickAndMorty(params/*, hash*/) {
+export function rickAndMorty() {
   return `
   <div class="r-n-m-container container">
   <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
