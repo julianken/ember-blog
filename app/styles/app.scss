@@ -214,11 +214,6 @@ p.faded-label.mobile-title-section {
       color: #4990E2;
     }
   }
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
-  @media screen and (max-width: 500px) {
-  }
 }
 
 
@@ -334,6 +329,9 @@ form.contact {
   h3 {
     margin: 32px 0 16px 0;
     line-height: 48px;
+    @media screen and (max-width: 768px) {
+      line-height: 36px;
+    }
   }
   p {
     margin-bottom: 0;

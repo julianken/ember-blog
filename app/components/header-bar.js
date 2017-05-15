@@ -28,16 +28,18 @@ export default Ember.Component.extend({
   },
   actions: {
     toggleMobileMenu() {
-      if (this.isActive === false) {
-        this.set('activeClass', 'active');
-        Ember.$('.app-content').addClass('active-mobile-body');
-        Ember.$('.header').addClass('active-mobile-header');
-        this.set('isActive', true);
-      } else {
+      if (this.isActive) {
         this.set('activeClass', '');
         Ember.$('.app-content').removeClass('active-mobile-body');
         Ember.$('.header').removeClass('active-mobile-header');
         this.set('isActive', false);
+        setTimeout(() => { Ember.$('.mobile-nav').css('display', 'none') }, 350)
+      } else {
+        Ember.$('.mobile-nav').css('display', 'block');
+        this.set('activeClass', 'active');
+        Ember.$('.app-content').addClass('active-mobile-body');
+        Ember.$('.header').addClass('active-mobile-header');
+        this.set('isActive', true);
       }
     },
     closeMobileMenu() {
