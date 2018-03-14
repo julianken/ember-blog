@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export function initialize(application) {
   application.inject('route', 'router', 'router:main');
   application.inject('component', 'router', 'router:main');

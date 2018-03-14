@@ -17,6 +17,8 @@ $proxima-condensed-semibold: 'proximanovacond-semibold-webfont';
 $proxima-regular: 'proximanova-regular-webfont';
 $average: 'average';
 
+$screen-md: 768px;
+
 html {
   height: 100%;
 }
@@ -86,12 +88,15 @@ p.faded-label.mobile-title-section {
   max-width: 100%;
   transition: transform 350ms;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06);
+
   > div {
     margin: 0 40px;
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: $screen-md) {
       margin: 0;
     }
   }
+
   &:before {
     content: '';
     background-color: #fff;
@@ -105,6 +110,7 @@ p.faded-label.mobile-title-section {
       display: none;
     }
   }
+
   &:after {
     content: '';
     background-color: #fff;
@@ -114,18 +120,22 @@ p.faded-label.mobile-title-section {
     right: -5px;
     top: 0;
     height: 88px;
+
     @media screen and (max-width: 1300px) {
       display: none;
     }
   }
+
   .header-title {
     display: inline-block;
     font-family: $proxima-regular;
     padding: 18px 0px 20px 0px;
+
     h3, p {
       display: inline-block;
       line-height: 16px;
     }
+
     h3 {
       font-family: $proxima-condensed-semibold;
       font-size: 14px;
@@ -135,22 +145,28 @@ p.faded-label.mobile-title-section {
         padding-left: 41px;
       }
     }
+
     p {
       font-size: 14px;
       font-family: $proxima-condensed-regular;
       color: #B8C2CC;
     }
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: $screen-md) {
       padding: 4px 16px 8px 16px;
     }
   }
+
   nav {
     float: right;
+
     ul {
       padding: 16px 0 20px 28px;
+
       @media screen and (max-width: 910px) {
         padding-right: 41px;
       }
+
       li {
         padding: 0 20px;
         font-size: 14px;
@@ -160,24 +176,29 @@ p.faded-label.mobile-title-section {
         text-transform: uppercase;
         font-family: $proxima-condensed-semibold;
         cursor: pointer;
+
         &:last-child {
           padding-right: 0;
         }
+
         &:hover {
           color: #A1A9B3;
           transition: color 100ms ease-in-out;
         }
       }
+
       li.active {
         opacity: 1;
         color: #4990E2;
       }
     }
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: $screen-md) {
       display: none;
     }
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     height: 64px;
     box-shadow: 2px 1px 4px 1px #ccc;
   }
@@ -196,10 +217,12 @@ p.faded-label.mobile-title-section {
   transition: transform 350ms;
   transition-timing-function: ease-in-out;
   display: none;
+
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
+
     li {
       padding: 24px 44px;
       font-size: 14px;
@@ -209,6 +232,7 @@ p.faded-label.mobile-title-section {
       cursor: pointer;
       border-bottom: 1px solid #E6E6E6;
     }
+
     li.active {
       opacity: 1;
       color: #4990E2;
@@ -230,21 +254,27 @@ p.faded-label.mobile-title-section {
 
 .contact-item {
   padding: 25px;
+
   &:nth-child(1) {
     padding-left: 0;
+
     @media screen and (max-width: 910px) {
       padding: 0 40px;
     }
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: $screen-md) {
       padding: 0 16px;
     }
   }
+
   &:nth-child(2) {
     padding-right: 0;
+
     @media screen and (max-width: 910px) {
       padding: 0 40px;
     }
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: $screen-md) {
       padding: 0 16px;
     }
   }
@@ -259,13 +289,16 @@ p.faded-label.mobile-title-section {
 
 form.contact {
   text-align: center;
+
   input {
     width: 100%;
   }
+
   textarea {
     width: 100%;
     resize: vertical;
   }
+
   input, textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -278,6 +311,7 @@ form.contact {
     z-index: 3;
     position: relative;
   }
+
   .contact-submit {
     font-family: $proxima-condensed-semibold;
     background-color: #4990E2;
@@ -292,6 +326,7 @@ form.contact {
     margin: 0 auto;
     box-sizing: border-box;
   }
+
   .contact-submit.success-button {
     width: 0 !important;
     background-color: #72DCA3;
@@ -326,13 +361,16 @@ form.contact {
 
 .blog-list-post, .work-list-post {
   margin-top: 48px;
+
   h3 {
     margin: 32px 0 16px 0;
     line-height: 48px;
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: $screen-md) {
       line-height: 36px;
     }
   }
+
   p {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -344,8 +382,10 @@ form.contact {
 }
 
 footer {
+
   svg {
     cursor: pointer;
+
     &:hover {
       #codepenIcon, #githubIcon, #linkedinIcon {
           fill: #000;
@@ -354,15 +394,16 @@ footer {
   }
 }
 
-
 .blog-list, .blog-single {
+  padding: 0 50px;
+
   h3 {
     a {
       color: #17181A;
     }
   }
-  padding: 0 50px;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     padding: 0 16px;
   }
 }
@@ -374,6 +415,7 @@ footer {
 footer {
   text-align: center;
   padding: 60px 0 86px 0;
+
   svg {
     padding: 12px 14px;
   }
@@ -387,22 +429,28 @@ footer {
   margin-top: 88px;
   box-sizing: border-box;
   transition: background-color 1s, color 1s, text-shadow 1s;
+
   .success-header {
     color: #eee;
   }
+
   > div {
     max-width: 818px;
     margin: 0 auto;
   }
+
   @media screen and (max-width: 1350px) {
     padding: 0 15vw;
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     padding: 0 24px;
   }
+
   @media screen and (max-width: 575px) {
     padding: 0 16px;
   }
+
   .emoji-header {
     width: 100%;
     padding: 40px 0;
@@ -412,27 +460,36 @@ footer {
     line-height: 1.5;
     color: #899199;
     margin: 0;
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: $screen-md) {
       padding: 24px 0;
     }
   }
 }
 
+.em {
+  margin-top: -5px;
+}
+
 .resume-section {
   border-bottom: 1px solid #DAE0E6;
   padding: 50px 0;
+
   .work-experience-entry {
     padding-bottom: 24px;
   }
+
   .faded-label {
     line-height: 1.5;
     font-size: 14px;
     text-transform: uppercase;
   }
+
   p {
     margin: 0;
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     padding: 0;
     .mobile-title-section {
       background-color: #F5F7FA;
@@ -441,12 +498,15 @@ footer {
       font-size: 16px;
       line-height: 11px;
     }
+
     .inside-resume-section-wrapper {
       padding: 84px 16px 0 16px;
+
       &:first-child {
         padding-top: 100px;
       }
     }
+
     .work-experience-entry {
       p {
         padding-bottom: 0;
@@ -457,6 +517,7 @@ footer {
 
 .resume-section.pdf-download {
   text-align: center;
+
   div {
     font-family: $proxima-condensed-semibold;
     background-color: #4990E2;
@@ -468,13 +529,15 @@ footer {
     padding: 20px;
     max-width: 320px;
   }
-  @media screen and (max-width: 768px) {
-    div {
-      margin: 0 auto;
-    }
+
+  @media screen and (max-width: $screen-md) {
     padding: 32px 16px;
     border-bottom: 1px solid #DAE0E6;
     background-color: #F5F7FA;
+
+    div {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -488,7 +551,7 @@ footer {
 }
 
 .desktop-header {
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: $screen-md){
     display: none;
   }
 }
@@ -496,7 +559,8 @@ footer {
 .mobile-header {
   display: none;
   margin-top: 6px;
-  @media screen and (max-width: 768px){
+
+  @media screen and (max-width: $screen-md){
     display: block;
   }
 }
@@ -509,20 +573,24 @@ footer {
   display: inline-block;
   padding: 8px;
   cursor: pointer;
+
   .hamburger-component {
     height: 3px;
     background-color: #B8C2CC;
     width: 22px;
     margin: 4px 0;
   }
+
   .sesame-seed {
     transition: transform 350ms;
     transform-origin: 100% 80%;
   }
+
   .boring-bottom-bun {
     transition: transform 350ms;
     transform-origin: 100% 20%;
   }
+
   .that-meat {
     transition: transform 350ms;
     transform-origin: 0% 50%;
@@ -534,7 +602,8 @@ footer {
   float: right;
   margin: -1px 24px 12px 24px;
   transition-timing-function: ease-in-out;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     display: block;
     margin-right: 0;
   }
@@ -544,6 +613,7 @@ body {
   z-index: 3;
   background-color: #fff;
   position: relative;
+
   .app-content {
     position: relative;
     background-color: #fff;
@@ -553,8 +623,10 @@ body {
     height: 100%;
     min-height: 100vh;
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     top: -22px;
+
     .app-content {
       box-shadow: 2px 1px 4px 1px #ccc;
     }
@@ -570,20 +642,21 @@ body {
   color: #D8D8D8;
   display: none;
   right: 56px;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     display: block;
     margin-top: 5px;
   }
 }
 
 .active-mobile-body {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $screen-md) {
     transform: translate3d(-45vw, 0, 0);
   }
 }
 
 .active-mobile-header {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $screen-md) {
     transform: translate3d(-45vw, 0, 0);
   }
 }
@@ -596,9 +669,11 @@ body {
   .sesame-seed {
     transform: rotate(45deg) translate(5px, 6px) scaleX(.7);
   }
+
   .that-meat {
     transform: scaleX(.9);
   }
+
   .boring-bottom-bun {
     transform: rotate(-45deg) translate(5px, -6px) scaleX(.7);
   }
@@ -614,7 +689,8 @@ body {
 .halves-container {
   text-align: center;
   margin: 0 auto;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     max-width: 400px;
   }
 }
@@ -624,20 +700,25 @@ body {
   float: left;
   position: relative;
   box-sizing: border-box;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     width: 100%;
   }
+  
   &.half-left {
     padding: 0 20px 0 0;
-    @media screen and (max-width: 768px) {
+    
+    @media screen and (max-width: $screen-md) {
       padding: 0 0 40px 0;
       max-width: 400px;
       margin: 0 auto;
     }
   }
+  
   &.half-right {
     padding: 0 0 0 20px;
-    @media screen and (max-width: 768px) {
+    
+    @media screen and (max-width: $screen-md) {
       padding: 0;
       max-width: 400px;
       margin: 0 auto;
@@ -650,8 +731,22 @@ body {
   float: left;
   position: relative;
   box-sizing: border-box;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     width: 100%;
+  }
+}
+
+.doubler {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    display: block;
   }
 }
 
@@ -665,23 +760,28 @@ body {
 // blog
 .blog-single.content {
   margin-top: 80px;
+
   img {
     max-width: 100%;
     margin-top: 40px;
     margin-bottom: 40px;
   }
+
   .triplet {
     width: 33%;
     float: left;
     padding: 40px 4px;
     box-sizing: border-box;
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     padding-top: 40px;
     margin-top: -73px;
   }
+
   .blog-content h3 {
     font-size: 24px;
+
     @media screen and (max-width: 575px) {
       font-size: 20px;
     }
@@ -700,9 +800,11 @@ hr {
 pre {
   margin-bottom: 40px !important;
   margin-top: 40px !important;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     font-size: 14px;
   }
+
   @media screen and (max-width: 550px) {
     font-size: 12px;
   }
@@ -749,9 +851,11 @@ pre {
   left: 25;
   animation: rickMove 4s infinite alternate;
   z-index: 50;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     width: 262.5px;
   }
+
   @media screen and (max-width: 575px) {
     width: 175px;
   }
@@ -766,9 +870,11 @@ pre {
   left: 200px;
   animation: mortyMove 4s infinite alternate ease-in-out;
   z-index: 50;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     width: 206.25px;
   }
+
   @media screen and (max-width: 575px) {
     width: 137.5px;
   }
@@ -796,7 +902,7 @@ pre {
   100%   {background-position: 55% 48%; background-size: 118%}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $screen-md) {
   @keyframes mortyMove {
     0%     {top: 10px; left: 5%}
     25%    {top: 13px; left: 10%}
@@ -852,9 +958,11 @@ pre {
   background-repeat: no-repeat;
   animation: background 20s infinite alternate ease-in-out;
   background-clip: content-box;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: $screen-md) {
     height: 300px;
   }
+  
   @media screen and (max-width: 575px) {
     height: 200px;
   }
