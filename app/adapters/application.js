@@ -1,5 +1,6 @@
 import DS from 'ember-data';
+import ENV from 'ember-blog/config/environment';
 
 export default DS.RESTAdapter.extend({
-	host: 'http://138.197.204.86:3000'
+	host: ENV.APP.API_LOCATION
 });
